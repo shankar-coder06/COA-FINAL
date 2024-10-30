@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Conversion Tool</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Number Conversion Tool</h1>
+    <div class="form-group">
+      <label for="fromChoice">Convert from:</label>
+      <select id="fromChoice">
+        <option value="1">Binary</option>
+        <option value="2">Decimal</option>
+        <option value="3">Octal</option>
+        <option value="4">Hexadecimal</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="toChoice">Convert to:</label>
+      <select id="toChoice">
+        <option value="1">Binary</option>
+        <option value="2">Decimal</option>
+        <option value="3">Octal</option>
+        <option value="4">Hexadecimal</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="inputNumber">Enter number:</label>
+      <input type="text" id="inputNumber" placeholder="Enter your number here">
+    </div>
+    <button id="convertButton">Convert</button>
+    <div class="result" id="resultDisplay"></div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
